@@ -1,4 +1,4 @@
-# OCTIP: OCT Internship Package
+# OCTIP: OCT Image Preprocessing
 
 ## Installation
 
