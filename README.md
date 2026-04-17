@@ -2,10 +2,14 @@
 
 This repository contains our team solution for the **MICCAI 2024 MARIO Challenge**, focusing on **retinal disease progression analysis from OCT imaging**.
 
-🔬 This work is based on our paper:  
+This work is based on our paper:  
+
 **"Patch Progression Masked Autoencoder with Fusion CNN Network for Classifying Evolution Between Two Pairs of 2D OCT Slices"**  
+
 P. Zhang et al., MICCAI 2024.  
+
 [Paper link](https://link.springer.com/chapter/10.1007/978-3-031-86651-7_9)
+
 ---
 
 ## 🧠 Overview
