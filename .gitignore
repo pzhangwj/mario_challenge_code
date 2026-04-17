@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# pdf 
+.pdf 
+
+# Models / weights (gros fichiers)
+*.pth
+*.pt
+*.hdf5
+
+# Existing project ignores
+/models/task1_models/
+/models/task2_models/
+/utils/octip_models/
+/utils/ppmae_models/
+
+/outputs

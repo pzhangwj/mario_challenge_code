@@ -1,0 +1,42 @@
+csv_path: csv/df_task2_val_challenge.csv
+data_root: ./data/
+output_dir: output
+
+image_size: [512, 200]
+gray_scale: false
+
+batch_size: 1
+num_workers: 0
+max_samples: 100
+
+mae_checkpoint: ./utils/ppmae_models/ppmae_vit_large_v2.pth
+
+model_names:
+  - MarioModelT1
+  - MarioModelT1
+  - MarioModelT1
+  - MarioModelT1
+
+model_params:
+  backbone: resnet50
+  pretrained: false
+  num_classes: 4
+  model_type: features_fusion
+
+model_paths_v1:
+  - ./models/task1_models/v1/task1_best_model_f0.pth
+  - ./models/task1_models/v1/task1_best_model_f1.pth
+  - ./models/task1_models/v1/task1_best_model_f2.pth
+  - ./models/task1_models/v1/task1_best_model_f3.pth
+
+model_paths_v2:
+  - ./models/task1_models/v2/task1_best_model_f0_ens_2.pth
+  - ./models/task1_models/v2/task1_best_model_f1_ens_2.pth
+  - ./models/task1_models/v2/task1_best_model_f2_ens_2.pth
+  - ./models/task1_models/v2/task1_best_model_f3_ens_2.pth
+
+model_paths_v3:
+  - ./models/task2_models/best_model_finetune_f0.pth
+  - ./models/task2_models/best_model_finetune_f1.pth
+  - ./models/task2_models/best_model_finetune_f2.pth
+  - ./models/task2_models/best_model_finetune_f3.pth
