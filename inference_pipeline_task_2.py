@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from models.model import MarioModelT1
-from utils.dataset import MARIO_DS_T2_V2
+from utils.dataset import MARIO_DS_T2
 from utils.mae_model import PatchProgressionAutoencoderViT
 from utils.scoring import specificity
 
@@ -212,7 +212,7 @@ def main():
 
     model_mae = load_mae_model(cfg["mae_checkpoint"])
 
-    dataset = MARIO_DS_T2_V2(
+    dataset = MARIO_DS_T2(
         df,
         mode="test",
         image_size=tuple(cfg["image_size"]),
