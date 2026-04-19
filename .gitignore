@@ -14,7 +14,7 @@ __pycache__/
 *.log
 
 # pdf 
-.pdf 
+*.pdf 
 
 # Models / weights (gros fichiers)
 *.pth
@@ -28,3 +28,6 @@ __pycache__/
 /utils/ppmae_models/
 
 /outputs
+
+# Dataset
+data/
