@@ -31,6 +31,7 @@ class MARIO_DS_T1(Dataset):
                  gray_scale=False, #False [c=3] / True [c=1]
                  root_dir='',
                  processing_octip = True,
+                 octip_model_directory = "./utils/octip_models",
                  ):
 
         self.samples = df
@@ -48,8 +49,8 @@ class MARIO_DS_T1(Dataset):
             
             model_directory = "./utils/octip_models"
 
-            self.localizer1 = RetinaLocalizer('FPN','efficientnetb6',(384, 384),model_directory = model_directory)
-            self.localizer2 = RetinaLocalizer('FPN', 'efficientnetb7', (320, 320),model_directory = model_directory)
+            self.localizer1 = RetinaLocalizer('FPN','efficientnetb6',(384, 384), model_directory = octip_model_directory)
+            self.localizer2 = RetinaLocalizer('FPN', 'efficientnetb7', (320, 320), model_directory = octip_model_directory)
 
             self.preprocessor = PreProcessor(200, min_height = 100, normalize_intensities = True)
 
@@ -154,7 +155,8 @@ class MARIO_DS_T2(Dataset):
                  gray_scale=False, #False [c=3] / True [c=1]
                  root_dir='',
                  processing_octip = True,
-                 mae_model = None
+                 mae_model = None,
+                 octip_model_directory = "./utils/octip_models"
                  ):
 
         self.samples = df
@@ -172,10 +174,8 @@ class MARIO_DS_T2(Dataset):
         # OCTIP
         if self.processing_octip : 
             
-            model_directory = "./utils/octip_models"
-
-            self.localizer1 = RetinaLocalizer('FPN','efficientnetb6',(384, 384),model_directory = model_directory)
-            self.localizer2 = RetinaLocalizer('FPN', 'efficientnetb7', (320, 320),model_directory = model_directory)
+            self.localizer1 = RetinaLocalizer('FPN','efficientnetb6',(384, 384),model_directory = octip_model_directory)
+            self.localizer2 = RetinaLocalizer('FPN', 'efficientnetb7', (320, 320),model_directory = octip_model_directory)
 
             self.preprocessor = PreProcessor(200, min_height = 100, normalize_intensities = True)
 
